@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Témahét 2026 a vízről</title>
+  <meta name="description" content="Iskolai témahét 2026. november 30. és december 4. között: a 2026-os aszály Magyarországon, a víz mint erőforrás, és amit mi magunk tehetünk.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%233d8bdb' d='M50 0C50 0 84 38 84 64A34 34 0 1 1 16 64C16 38 50 0 50 0Z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Jelzi a stíluslapnak, hogy a JavaScript működik (a mobil menühöz kell) -->
+  <script>document.documentElement.className += " js";</script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== Újrahasznosítható SVG alakzatok (csepp, ikonok) ===== -->
+  <svg class="rejtett-svg" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- A vízcsepp alakja: hegyes teteje (50,0), kerek alja (alul y = 98) -->
+      <symbol id="csepp" viewBox="0 0 100 100">
+        <path d="M50 0C50 0 84 38 84 64A34 34 0 1 1 16 64C16 38 50 0 50 0Z"/>
+      </symbol>
+      <!-- szélesebb csepp a kártyák mögé -->
+      <symbol id="csepp-szeles" viewBox="0 0 100 100">
+        <path d="M50 0C50 0 97 36 97 62A47 38 0 1 1 3 62C3 36 50 0 50 0Z"/>
+      </symbol>
+      <clipPath id="csepp-vagas">
+        <path d="M50 0C50 0 84 38 84 64A34 34 0 1 1 16 64C16 38 50 0 50 0Z"/>
+      </clipPath>
+
+      <symbol id="ikon-csepp" viewBox="0 0 24 24">
+        <path d="M12 2.5s-6.5 7.3-6.5 11.9a6.5 6.5 0 0 0 13 0C18.5 9.8 12 2.5 12 2.5Z" fill="currentColor"/>
+      </symbol>
+      <symbol id="ikon-villam" viewBox="0 0 24 24">
+        <path d="M13.5 2 4.5 13.5h6.2L9.5 22l9-11.5h-6.2L13.5 2Z" fill="currentColor"/>
+      </symbol>
+      <symbol id="ikon-haz" viewBox="0 0 24 24">
+        <path d="M3.5 10.5 12 3.8l8.5 6.7V20a.8.8 0 0 1-.8.8H14.5v-6h-5v6H4.3a.8.8 0 0 1-.8-.8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="ikon-iskola" viewBox="0 0 24 24">
+        <path d="M3.5 20.5V10L12 5l8.5 5v10.5M9.5 20.5v-5h5v5M12 5V2.2h3.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="ikon-noveny" viewBox="0 0 24 24">
+        <path d="M12 21v-9M12 12c0-4.4 3.1-7.5 8-7.5 0 4.9-3.1 7.5-8 7.5ZM12 14.5c0-3.3-2.3-5.5-6.5-5.5 0 3.3 2.3 5.5 6.5 5.5ZM6 21h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="ikon-gyar" viewBox="0 0 24 24">
+        <path d="M3 20.5V11l5.5 3.2V11l5.5 3.2V11l3.5 2V4h3v16.5ZM7 17.5h2M11.5 17.5h2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="ikon-bicikli" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round">
+          <circle cx="5.5" cy="16" r="3.8"/><circle cx="18.5" cy="16" r="3.8"/>
+          <path d="M5.5 16 9.5 8.5h6.5l2.5 7.5M9.5 8.5 12.5 16h-7M8.5 6h3M14.5 5.5h2.5l-1 3"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="ugras" href="#tartalom">Ugrás a tartalomra</a>
+
+  <!-- ===== Fejléc és menü ===== -->
+  <header class="fejlec">
+    <div class="keret fejlec-belso">
+      <a class="logo" href="#kezdolap">Témahét 2026</a>
+      <button class="menu-gomb" type="button" aria-expanded="false" aria-controls="fomenu">Menü</button>
+      <nav id="fomenu" class="fomenu" aria-label="Főmenü">
+        <a href="#valosag">A valóság</a>
+        <a href="#viz">A víz</a>
+        <a href="#megoldas">A megoldás</a>
+        <a href="#plakatverseny">Plakátverseny</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="tartalom">
+
+    <!-- ===== 1. Nyitó rész ===== -->
+    <section id="kezdolap" class="nyito">
+      <div class="keret">
+        <!-- A kivágott papírbetűk: minden betű külön elem, hogy kicsit el tudjuk forgatni -->
+        <h1 class="papirbetuk" aria-label="Témahét 2026">
+          <span class="szo" aria-hidden="true"><span>T</span><span>É</span><span>M</span><span>A</span><span>H</span><span>É</span><span>T</span></span>
+          <span class="szo" aria-hidden="true"><span>2</span><span>0</span><span>2</span><span>6</span></span>
+        </h1>
+
+        <div class="nyito-racs">
+          <div class="nyito-szoveg">
+            <p class="csik csik-nagy"><span>Erőforrás krízisben – a víz</span></p>
+            <p class="datum-cetli">
+              <time datetime="2026-11-30">november 30.</time> – <time datetime="2026-12-04">december 4.</time>
+            </p>
+            <p class="bevezeto">
+              2026 nyarán alig esett eső, rekordalacsonyra apadt a Duna, és kiszáradóban volt a Velencei-tó.
+              A témahéten megnézzük, mi történt, miért került válságba a víz mint erőforrás, és mit tehetünk mi magunk.
+            </p>
+            <div class="gombok">
+              <a class="gomb gomb-fo" href="#megoldas">Mit tehetünk mi?</a>
+              <a class="gomb" href="#plakatverseny">A plakátverseny részletei</a>
+            </div>
+          </div>
+
+          <!-- Csepp alakú mérő: a tele csepp az átlagos nyár, a kék rész 2026 nyara -->
+          <figure class="csepp-mero nyito-mero">
+            <svg viewBox="0 0 100 100" role="img" aria-labelledby="nyito-mero-cim">
+              <title id="nyito-mero-cim">2026 nyarán a szokásos nyári csapadék 36 százaléka esett le</title>
+              <use href="#csepp" class="mero-ures"/>
+              <g clip-path="url(#csepp-vagas)">
+                <g class="mero-viz" data-arany="0.36">
+                  <path class="mero-hullam" d="M-100 0Q-87.5 -3 -75 0T-50 0T-25 0T0 0T25 0T50 0T75 0T100 0T125 0T150 0T175 0T200 0V110H-100Z"/>
+                </g>
+              </g>
+              <use href="#csepp" class="mero-korvonal"/>
+            </svg>
+            <figcaption>
+              <span class="mero-szam">36%</span>
+              <span class="mero-felirat">Ennyi eső esett 2026 nyarán a szokásos mennyiséghez képest.</span>
+              <span class="mero-forras">A tele csepp az 1991–2020-as nyarak átlaga. Forrás: HungaroMet</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. A valóság ===== -->
+    <section id="valosag" class="szakasz szakasz-valosag" aria-labelledby="valosag-cim">
+      <div class="keret">
+        <header class="szakasz-fej">
+          <h2 id="valosag-cim" class="csik"><span>A valóság – Aktuális helyzet Magyarországon</span></h2>
+          <p class="szakasz-bevezeto">
+            A HungaroMet elemzése szerint 2026-ban az elmúlt 126 év legsúlyosabb aszálya sújtotta Magyarországot.
+            A szárazság már 2025 második felében elkezdődött, és a tél sem hozta meg a szükséges csapadékot.
+          </p>
+        </header>
+
+        <h3 class="alcim">2026 nyara számokban</h3>
+        <ul class="szamok szamok-aszaly">
+          <li>
+            <span class="szam">74,1 mm</span>
+            <span class="szam-szoveg">Ennyi eső hullott egész nyáron, országos átlagban.</span>
+          </li>
+          <li>
+            <span class="szam">+2,59 °C</span>
+            <span class="szam-szoveg">Ennyivel volt melegebb a nyár az átlagnál, a középhőmérséklet 23,43 °C lett.</span>
+          </li>
+          <li>
+            <span class="szam">10%</span>
+            <span class="szam-szoveg">Áprilisban csak ennyi esett a szokásos esőmennyiségből.</span>
+          </li>
+          <li>
+            <span class="szam">100 mm</span>
+            <span class="szam-szoveg">Ennél is több víz hiányzott június végén a talaj felső egy méteréből, szinte az egész országban.</span>
+          </li>
+        </ul>
+        <p class="forras-sor">Forrás: HungaroMet, idézi az Euronews és az Economx <span class="egyben">(2026. október 9.)</span></p>
+
+        <h3 class="alcim">Mit írt a sajtó?</h3>
+        <div class="kartyak kartyak-2">
+          <article class="csepp-kartya tu-piros">
+            <svg class="csepp-hatter" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><use href="#csepp-szeles"/></svg>
+            <div class="lap">
+              <h4>Az elmúlt 126 év legsúlyosabb aszálya</h4>
+              <p>
+                2026 nyara 1901 óta a legszárazabb és a második legmelegebb volt. Országosan 74,1 mm eső esett,
+                ami az <span class="egyben">1991–2020-as</span> átlag <span class="egyben">36%-a</span>. Ezzel még az 1952-es rekordszáraz nyarat is megelőzte.
+              </p>
+              <p class="forras">Forrás: <a href="https://hu.euronews.com/2026/10/09/az-elmult-126-ev-legsulyosabb-aszalya-sujtotta-iden-magyarorszagot">Euronews, 2026. október 9.</a></p>
+            </div>
+          </article>
+
+          <article class="csepp-kartya tu-zold">
+            <svg class="csepp-hatter" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><use href="#csepp-szeles"/></svg>
+            <div class="lap">
+              <h4>Hónapok óta tartó szárazság</h4>
+              <p>
+                A január még hideg és csapadékos volt, utána viszont minden hónapban kevesebb eső esett a szokásosnál.
+                Április 1. és szeptember 2. között az idő <span class="egyben">84%-ában</span> az ország legalább harmadán aszály volt,
+                augusztus végén pedig az ország felén súlyos mezőgazdasági aszály alakult ki.
+              </p>
+              <p class="forras">Forrás: <a href="https://www.economx.hu/belfold/az-evszazad-legsulyosabb-aszalya-volt-az-idei/">Economx, 2026. október 9.</a></p>
+            </div>
+          </article>
+
+          <article class="csepp-kartya tu-sarga">
+            <svg class="csepp-hatter" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><use href="#csepp-szeles"/></svg>
+            <div class="lap">
+              <h4>Mi történik a vizeinkkel?</h4>
+              <p>
+                Július közepén a Duna Bajánál 17 cm-en állt. Ennyire alacsony még sosem volt. A Velencei-tóban
+                <span class="egyben">június 24-én</span> megdőlt a negatív rekord, és nagyjából egy méter víz hiányzott belőle. A Balaton 64 cm-es
+                szintje 24 cm-rel maradt el a július közepi átlagtól. A vízügy szerint az ivóvízellátás nem volt veszélyben.
+              </p>
+              <p class="forras">Forrás: <a href="https://www.telex.hu/techtud/2026/07/18/duna-tisza-balaton-velencei-to-vizallas-negativ-rekord">Telex, 2026. július 18.</a></p>
+            </div>
+          </article>
+
+          <article class="csepp-kartya tu-kek">
+            <svg class="csepp-hatter" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><use href="#csepp-szeles"/></svg>
+            <div class="lap">
+              <h4>Tömegesen pusztultak a halak</h4>
+              <p>
+                A Fejér vármegyei Rétimajor halastavaiban kb. 150 tonna hal pusztult el, 165 millió forint értékben.
+                A tavakban alig 40 cm, 28 fokos víz maradt. A tulajdonos szerint az ország mintegy 27 ezer hektárnyi
+                halastavának kotrásával olcsóbban lehetne vizet visszatartani, mint új tározókkal.
+              </p>
+              <p class="forras">Forrás: <a href="https://hu.euronews.com/2026/08/08/tomegesen-pusztulnak-a-halak-a-halastavakban-a-mezogazdasagi-agazatok-osszefogasat-surgeti">Euronews, 2026. augusztus 8.</a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Erőforrás krízisben – a víz ===== -->
+    <section id="viz" class="szakasz szakasz-viz" aria-labelledby="viz-cim">
+      <div class="keret">
+        <header class="szakasz-fej szakasz-fej-kepes">
+          <div>
+            <h2 id="viz-cim" class="csik"><span>Erőforrás krízisben – a víz</span></h2>
+            <p class="szakasz-bevezeto">
+              A víz megújuló erőforrás, de nem kimeríthetetlen. Ha hónapokon át kevesebb eső esik, mint amennyi
+              elpárolog és amennyit felhasználunk, kiürülnek a tavak, apadnak a folyók és kiszárad a talaj.
+              Magyarország ráadásul különösen kiszolgáltatott.
+            </p>
+          </div>
+          <!-- Kettévágott csepp: az egyik fele zöld és vizes, a másik kiszáradt -->
+          <svg class="ketarcu-csepp" viewBox="0 0 100 100" aria-hidden="true">
+            <defs>
+              <linearGradient id="egbolt" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#9fd0f2"/><stop offset="1" stop-color="#e8f4fb"/>
+              </linearGradient>
+              <linearGradient id="fu" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#6fbf4a"/><stop offset="1" stop-color="#2f8a3c"/>
+              </linearGradient>
+              <linearGradient id="homok" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f3c77a"/><stop offset="1" stop-color="#c98a3e"/>
+              </linearGradient>
+            </defs>
+            <g clip-path="url(#csepp-vagas)">
+              <rect width="50" height="100" fill="url(#egbolt)"/>
+              <rect y="58" width="50" height="42" fill="url(#fu)"/>
+              <path d="M0 74q12-4 25 0t25 0V100H0Z" fill="#3d8bdb"/>
+              <path d="M4 82q10-3 20 0M18 90q10-3 20 0" stroke="#bfe0f7" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+              <rect x="50" width="50" height="100" fill="#f6dfb0"/>
+              <rect x="50" y="58" width="50" height="42" fill="url(#homok)"/>
+              <path d="M52 64l7 6-3 7 9 5M59 70l9-3 6 8 10-2M74 75l-2 9 8 6M65 82l-6 9M84 73l8 7M88 88l-9-2" stroke="#7a4e2d" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="63" cy="40" r="7" fill="#f7b13c"/>
+            </g>
+            <line x1="50" y1="2" x2="50" y2="98" stroke="#17171c" stroke-width="1.6"/>
+            <use href="#csepp" class="ketarcu-korvonal"/>
+          </svg>
+        </header>
+
+        <h3 class="alcim">Néhány szám, amit érdemes tudni</h3>
+        <ul class="szamok szamok-viz">
+          <li>
+            <span class="szam">95%</span>
+            <span class="szam-szoveg">Ennyi érkezik külföldről a felszíni vizeinkből. Ha a szomszéd országokban is aszály van, a mi folyóink is apadnak.</span>
+            <span class="szam-forras">Országos Vízügyi Főigazgatóság, idézi a Világgazdaság</span>
+          </li>
+          <li>
+            <span class="szam">100–110</span>
+            <span class="szam-szoveg">Ennyi liter ivóvizet használ el naponta egy átlagos magyarországi lakos.</span>
+            <span class="szam-forras">OKI, Ivóvíz kiskáté</span>
+          </li>
+          <li>
+            <span class="szam">20%</span>
+            <span class="szam-szoveg">Ennyi, vagyis minden ötödik liter ivóvíz vész el a csőhálózatban, mielőtt a csapokig érne.</span>
+            <span class="szam-forras">Víz Koalíció, idézi az Infostart (2025)</span>
+          </li>
+          <li>
+            <span class="szam">2,1 milliárd</span>
+            <span class="szam-szoveg">Ennyi embernek nincs biztonságos ivóvize a világon, vagyis minden negyediknek.</span>
+            <span class="szam-forras">WHO és UNICEF (2025)</span>
+          </li>
+        </ul>
+
+        <!-- Vízszintes sávdiagram: tól–ig értékek, liter/fő/nap -->
+        <figure class="diagram">
+          <h3 class="alcim" id="diagram-cim">Hová folyik el a napi 100–110 liter?</h3>
+          <p class="diagram-tanulsag">
+            Inni és főzni csak néhány litert használunk. A víz nagy része tisztálkodásra, mosásra és <span class="egyben">WC-öblítésre</span> megy el, ezért itt lehet a legtöbbet spórolni.
+          </p>
+          <div class="sav-skala" aria-hidden="true">
+            <span style="--x:0">0</span><span style="--x:25">25</span><span style="--x:50">50</span><span style="--x:75">75</span><span style="--x:100">100 liter</span>
+          </div>
+          <ul class="savok" aria-labelledby="diagram-cim">
+            <li style="--tol:40; --ig:100"><span class="sav-nev">Zuhanyzás, fürdés</span><span class="sav-palya"><span class="sav"></span></span><span class="sav-ertek">40–100</span></li>
+            <li style="--tol:20; --ig:40"><span class="sav-nev">Mosás</span><span class="sav-palya"><span class="sav"></span></span><span class="sav-ertek">20–40</span></li>
+            <li style="--tol:20; --ig:40"><span class="sav-nev">WC-öblítés</span><span class="sav-palya"><span class="sav"></span></span><span class="sav-ertek">20–40</span></li>
+            <li style="--tol:10; --ig:15"><span class="sav-nev">Kézmosás</span><span class="sav-palya"><span class="sav"></span></span><span class="sav-ertek">10–15</span></li>
+            <li style="--tol:5; --ig:10"><span class="sav-nev">Takarítás</span><span class="sav-palya"><span class="sav"></span></span><span class="sav-ertek">5–10</span></li>
+            <li style="--tol:4; --ig:7"><span class="sav-nev">Mosogatás</span><span class="sav-palya"><span class="sav"></span></span><span class="sav-ertek">4–7</span></li>
+            <li style="--tol:3; --ig:4"><span class="sav-nev">Ivás, főzés</span><span class="sav-palya"><span class="sav"></span></span><span class="sav-ertek">3–4</span></li>
+          </ul>
+          <figcaption class="forras-sor">
+            Liter/fő/nap, a számok csak nagyságrendet mutatnak. Forrás: OKI, Ivóvíz kiskáté (2012), a Magyar Víziközmű Szövetség adatai alapján.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== 4. A megoldás ===== -->
+    <section id="megoldas" class="szakasz szakasz-megoldas" aria-labelledby="megoldas-cim">
+      <div class="keret">
+        <header class="szakasz-fej">
+          <h2 id="megoldas-cim" class="csik"><span>A megoldás – Mit tehetünk mi?</span></h2>
+          <p class="szakasz-bevezeto">
+            A víz és az energia a két legfontosabb erőforrásunk, és szorosan összefüggnek. Sokat számít, hogyan bánunk velük
+            otthon, az iskolában és a munkahelyeken.
+          </p>
+        </header>
+
+        <!-- Kapcsoló: a két fül között JavaScript vált -->
+        <div class="valto" role="tablist" aria-label="Hol takarékoskodunk?">
+          <button class="valto-gomb" type="button" role="tab" id="ful-otthon" aria-controls="panel-otthon" aria-selected="true">A gyakorlatban</button>
+          <button class="valto-gomb" type="button" role="tab" id="ful-szakma" aria-controls="panel-szakma" aria-selected="false" tabindex="-1">A szakmában</button>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-otthon" aria-labelledby="ful-otthon">
+          <p class="panel-alcim">Háztartásokban és a mindennapokban</p>
+          <div class="kartyak kartyak-2">
+            <article class="csepp-kartya tu-feher">
+              <svg class="csepp-hatter" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><use href="#csepp-szeles"/></svg>
+              <div class="lap">
+                <h4 class="ikonos-cim"><svg class="ikon ikon-kek" aria-hidden="true"><use href="#ikon-csepp"/></svg>Víz: takarékosság és hatékonyság</h4>
+                <ul class="megoldas-lista">
+                  <li><strong>Perlátorok és szelepek.</strong> Légkeveréses csaptelepekkel és zuhanyfejekkel a vízfogyasztás akár <span class="egyben">50%-kal</span> is csökkenthető, a kényelem romlása nélkül.</li>
+                  <li><strong>Okos öntözés és esővízgyűjtés.</strong> A kertben a felszíni locsolás helyett a csepegtető öntözés és az összegyűjtött esővíz a legfenntarthatóbb megoldás.</li>
+                  <li><strong>Szürkevíz újrahasznosítása.</strong> A kézmosásból vagy fürdésből származó, enyhén szennyezett víz (szürkevíz) szűrés után kiválóan alkalmas <span class="egyben">WC-öblítésre</span>.</li>
+                </ul>
+              </div>
+            </article>
+            <article class="csepp-kartya tu-sarga">
+              <svg class="csepp-hatter" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><use href="#csepp-szeles"/></svg>
+              <div class="lap">
+                <h4 class="ikonos-cim"><svg class="ikon ikon-sarga" aria-hidden="true"><use href="#ikon-villam"/></svg>Energia: kisebb karbonlábnyom, kisebb számla</h4>
+                <ul class="megoldas-lista">
+                  <li><strong>Tudatos eszközhasználat.</strong> Kapcsolós elosztóval megszüntethető a készenléti („standby”) fogyasztás, és érdemes „A” vagy jobb energiaosztályú háztartási gépet választani.</li>
+                  <li><strong>Hőszigetelés és nyílászárók.</strong> Megfelelő szigeteléssel és háromrétegű üvegezéssel csökken a fűtés és a hűtés energiaigénye.</li>
+                  <li><strong>Okos otthon.</strong> A programozható termosztátok és a zónás fűtésszabályozás igazodnak a lakók napirendjéhez.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-szakma" aria-labelledby="ful-szakma" hidden>
+          <p class="panel-alcim">Az iparban, a mezőgazdaságban, az épületekben és a szállításban</p>
+          <div class="kartyak kartyak-2">
+            <article class="csepp-kartya tu-feher">
+              <svg class="csepp-hatter" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><use href="#csepp-szeles"/></svg>
+              <div class="lap">
+                <h4 class="ikonos-cim"><svg class="ikon ikon-kek" aria-hidden="true"><use href="#ikon-csepp"/></svg>Víz az iparban, mezőgazdaságban, építészetben</h4>
+                <ul class="megoldas-lista">
+                  <li><strong>Zárt láncú technológiák.</strong> A gyártósorokon a hűtő- és technológiai vizet nem engedik a csatornába, hanem tisztítás után visszaforgatják a rendszerbe.</li>
+                  <li><strong>Precíziós mezőgazdaság.</strong> Szenzoros, talajnedvesség-vezérelt öntözőrendszerek csak akkor és oda juttatnak vizet, ahol a növénynek szüksége van rá.</li>
+                  <li><strong>Szivárgásfigyelés okos eszközökkel.</strong> Okos vízmérők és akusztikus szenzorok azonnal jelzik a rejtett csőtöréseket, így megelőzhető a nagy vízveszteség.</li>
+                </ul>
+              </div>
+            </article>
+            <article class="csepp-kartya tu-sarga">
+              <svg class="csepp-hatter" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><use href="#csepp-szeles"/></svg>
+              <div class="lap">
+                <h4 class="ikonos-cim"><svg class="ikon ikon-sarga" aria-hidden="true"><use href="#ikon-villam"/></svg>Energia az iparban, épületekben, szállításban</h4>
+                <ul class="megoldas-lista">
+                  <li><strong>Energiamenedzsment-rendszerek (ISO 50001).</strong> Vállalati keretrendszer, amely folyamatosan méri, elemzi és optimalizálja a gyárak és irodaházak energiafogyasztását.</li>
+                  <li><strong>Hulladékhő hasznosítása.</strong> Az ipari folyamatokban keletkező hőt (például szervertermekből vagy kemencék füstgázából) távfűtésre vagy áramtermelésre használják fel újra.</li>
+                  <li><strong>Megújulók energiatárolással.</strong> Az ipari napelemparkok akkumulátoros tárolóval együtt csökkentik a hálózattól való függést és a csúcsidőszaki áramdíjakat.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Víz–energia nexus -->
+        <div class="nexus">
+          <svg class="nexus-abra" viewBox="0 0 330 236" role="img" aria-labelledby="nexus-abra-cim">
+            <title id="nexus-abra-cim">Az energiatermeléshez víz kell, a víz tisztításához és szállításához pedig energia</title>
+            <defs>
+              <marker id="nyilhegy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 10 5 0 10z" fill="#f3f1ec"/>
+              </marker>
+            </defs>
+            <path d="M98 64C136 20 188 20 222 62" class="nexus-nyil" marker-end="url(#nyilhegy)"/>
+            <path d="M222 160C188 202 136 202 100 158" class="nexus-nyil" marker-end="url(#nyilhegy)"/>
+            <use href="#csepp" x="22" y="62" width="96" height="96" class="nexus-viz"/>
+            <text x="70" y="134" class="nexus-felirat" text-anchor="middle">Víz</text>
+            <circle cx="266" cy="111" r="52" class="nexus-energia"/>
+            <use href="#ikon-villam" x="249" y="76" width="34" height="34" class="nexus-villam"/>
+            <text x="266" y="136" class="nexus-felirat" text-anchor="middle">Energia</text>
+            <text x="165" y="20" class="nexus-kis" text-anchor="middle">víz kell az erőművek hűtéséhez</text>
+            <text x="165" y="226" class="nexus-kis" text-anchor="middle">energia kell a víz tisztításához, szállításához</text>
+          </svg>
+          <div class="nexus-szoveg">
+            <h3 class="alcim">A két erőforrás összefonódása: a víz–energia nexus</h3>
+            <p>A szakemberek szerint a víz és az energia nem választható szét:</p>
+            <ul>
+              <li>a víz tisztítása, szállítása és melegítése rengeteg energiát igényel;</li>
+              <li>az energiatermelés, főleg a hagyományos erőművek hűtése, rengeteg vizet fogyaszt.</li>
+            </ul>
+            <p class="nexus-tanulsag">Aki vizet takarít meg, közvetve energiát is megtakarít, és ez fordítva is igaz. A modern mérnöki tervezés ezért a kettőt együtt optimalizálja.</p>
+          </div>
+        </div>
+
+        <!-- Vállalások: pipálható lista, a csepp a pipákkal együtt telik -->
+        <div class="vallalasok">
+          <div class="vallalasok-fej">
+            <h3 class="alcim">Kritikus erőforrások: mit vállalsz?</h3>
+            <p>Pipáld ki, amit már most is csinálsz, vagy amit a témahéten kipróbálsz. A csepp a vállalásaiddal együtt telik.</p>
+          </div>
+
+          <div class="vallalasok-racs">
+            <figure class="csepp-mero vallalas-mero" aria-live="polite">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <use href="#csepp" class="mero-ures"/>
+                <g clip-path="url(#csepp-vagas)">
+                  <g class="mero-viz" data-arany="0">
+                    <path class="mero-hullam" d="M-100 0Q-87.5 -3 -75 0T-50 0T-25 0T0 0T25 0T50 0T75 0T100 0T125 0T150 0T175 0T200 0V110H-100Z"/>
+                  </g>
+                </g>
+                <use href="#csepp" class="mero-korvonal"/>
+              </svg>
+              <figcaption>
+                <span class="mero-szam"><span id="vallalas-db">0</span> / <span id="vallalas-ossz">11</span></span>
+                <span class="mero-felirat" id="vallalas-uzenet">Pipálj ki egyet, és indul a csepp!</span>
+                <button type="button" class="szoveg-gomb" id="vallalas-torles">Pipák törlése</button>
+              </figcaption>
+            </figure>
+
+            <div class="cetlik">
+              <fieldset class="cetli tu-piros">
+                <legend><svg class="ikon" aria-hidden="true"><use href="#ikon-haz"/></svg>Otthon</legend>
+                <label><input type="checkbox" name="vallalas" value="zuhany"><span>Rövidebben zuhanyzom</span></label>
+                <label><input type="checkbox" name="vallalas" value="led"><span>LED-izzókat használok</span></label>
+                <label><input type="checkbox" name="vallalas" value="kikapcsolas"><span>Kikapcsolom a készülékeket, nem hagyom készenlétben</span></label>
+              </fieldset>
+              <fieldset class="cetli tu-zold">
+                <legend><svg class="ikon" aria-hidden="true"><use href="#ikon-iskola"/></svg>Iskola</legend>
+                <label><input type="checkbox" name="vallalas" value="villany"><span>Lekapcsolom a villanyt, ha kimegyek</span></label>
+                <label><input type="checkbox" name="vallalas" value="csap"><span>Elzárom a vízcsapot</span></label>
+                <label><input type="checkbox" name="vallalas" value="ujra"><span>Újrahasznosítok</span></label>
+                <label><input type="checkbox" name="vallalas" value="szelektiv"><span>Szelektíven gyűjtöm a hulladékot</span></label>
+              </fieldset>
+              <fieldset class="cetli tu-kek">
+                <legend><svg class="ikon" aria-hidden="true"><use href="#ikon-bicikli"/></svg>Közlekedés</legend>
+                <label><input type="checkbox" name="vallalas" value="gyalog"><span>Gyalog megyek, ha közel van</span></label>
+                <label><input type="checkbox" name="vallalas" value="bicikli"><span>Kerékpárral járok</span></label>
+                <label><input type="checkbox" name="vallalas" value="tomeg"><span>Tömegközlekedéssel utazom</span></label>
+                <label><input type="checkbox" name="vallalas" value="elektromos"><span>Elektromos járművel utazom (villamos, troli, <span class="egyben">e-busz)</span></span></label>
+              </fieldset>
+              <p class="cetlik-koztes">A szakmában erre figyelnek a gazdák és a cégek:</p>
+              <div class="cetli cetli-info tu-sarga">
+                <p class="cetli-cim"><svg class="ikon" aria-hidden="true"><use href="#ikon-noveny"/></svg>Mezőgazdaság</p>
+                <ul>
+                  <li>Csepegtető öntözés</li>
+                  <li>Talajtakarás</li>
+                  <li>Víztakarékos növénytermesztés</li>
+                </ul>
+              </div>
+              <div class="cetli cetli-info tu-feher">
+                <p class="cetli-cim"><svg class="ikon" aria-hidden="true"><use href="#ikon-gyar"/></svg>Ipar</p>
+                <ul>
+                  <li>Energiatakarékos technológiák</li>
+                  <li>A hulladék újrafelhasználása</li>
+                  <li>Megújuló energia</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Plakátverseny ===== -->
+    <section id="plakatverseny" class="szakasz szakasz-plakat" aria-labelledby="plakat-cim">
+      <div class="keret">
+        <div class="plakat">
+          <div class="plakat-szoveg">
+            <p class="plakat-felcim">Témahét 2026 – Erőforrás krízisben: a víz</p>
+            <h2 id="plakat-cim" class="plakat-cim">Plakátverseny</h2>
+            <p class="plakat-felhivas">Készíts plakátot, amelynek központi témája a víz!</p>
+            <dl class="plakat-adatok">
+              <div><dt>Leadás</dt><dd>november 9. és november 26. között</dd></div>
+              <div><dt>Technika</dt><dd>hagyományos technika, kézi rajz vagy festmény</dd></div>
+              <div><dt>Méret</dt><dd>A3</dd></div>
+              <div><dt>Kinek add le?</dt><dd>Sukta Erzsébet vagy Barkovánné Uzonyi Pálma tanárnőnek</dd></div>
+            </dl>
+            <p class="visszaszamlalo" id="visszaszamlalo">A leadási határidő: november 26.</p>
+          </div>
+          <svg class="plakat-kep" viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <radialGradient id="plakat-viz" cx="42%" cy="28%" r="85%">
+                <stop offset="0" stop-color="#eef8fe"/><stop offset=".5" stop-color="#9fcdef"/><stop offset="1" stop-color="#2f6fb3"/>
+              </radialGradient>
+              <clipPath id="plakat-kor"><circle cx="112" cy="94" r="80"/></clipPath>
+            </defs>
+            <g fill="#8cc9c4" opacity=".8">
+              <circle cx="14" cy="118" r="4"/><circle cx="28" cy="118" r="4"/><circle cx="42" cy="118" r="4"/>
+              <circle cx="14" cy="132" r="4"/><circle cx="28" cy="132" r="4"/><circle cx="42" cy="132" r="4"/>
+              <circle cx="14" cy="146" r="4"/><circle cx="28" cy="146" r="4"/>
+            </g>
+            <circle cx="112" cy="94" r="80" fill="url(#plakat-viz)"/>
+            <g clip-path="url(#plakat-kor)" fill="none" stroke="#ffffff">
+              <ellipse cx="112" cy="132" rx="16" ry="4.5" stroke-width="2.6" opacity=".95"/>
+              <ellipse cx="112" cy="132" rx="34" ry="9.5" stroke-width="2.2" opacity=".7"/>
+              <ellipse cx="112" cy="132" rx="54" ry="15" stroke-width="1.8" opacity=".45"/>
+              <ellipse cx="112" cy="132" rx="76" ry="21" stroke-width="1.4" opacity=".25"/>
+            </g>
+            <use href="#csepp" x="98" y="46" width="28" height="40" fill="#ffffff"/>
+            <g fill="#ffffff">
+              <circle cx="97" cy="116" r="2.6"/><circle cx="128" cy="113" r="3.2"/><circle cx="121" cy="104" r="1.8"/>
+            </g>
+            <path d="M8 182q16-8 32 0t32 0M8 192q16-8 32 0t32 0" stroke="#d9a04f" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. Források ===== -->
+    <section id="forrasok" class="szakasz szakasz-forrasok" aria-labelledby="forrasok-cim">
+      <div class="keret">
+        <h2 id="forrasok-cim" class="forrasok-cim">Források</h2>
+        <ol class="forrasok">
+          <li><a href="https://hu.euronews.com/2026/10/09/az-elmult-126-ev-legsulyosabb-aszalya-sujtotta-iden-magyarorszagot">Euronews: Az elmúlt 126 év legsúlyosabb aszálya sújtotta idén Magyarországot</a> <span class="egyben">(2026. október 9.)</span></li>
+          <li><a href="https://www.economx.hu/belfold/az-evszazad-legsulyosabb-aszalya-volt-az-idei/">Economx: Az évszázad legsúlyosabb aszálya volt az idei</a> <span class="egyben">(2026. október 9.)</span></li>
+          <li><a href="https://www.telex.hu/techtud/2026/07/18/duna-tisza-balaton-velencei-to-vizallas-negativ-rekord">Telex: Mi történik a Dunával és a Tiszával, hova lett a víz?</a> <span class="egyben">(2026. július 18.)</span></li>
+          <li><a href="https://hu.euronews.com/2026/08/08/tomegesen-pusztulnak-a-halak-a-halastavakban-a-mezogazdasagi-agazatok-osszefogasat-surgeti">Euronews: Tömegesen pusztulnak a halak a halastavakban</a> <span class="egyben">(2026. augusztus 8.)</span></li>
+          <li><a href="https://www.vg.hu/helyzetkep/2026/07/vizikozmu-rendszer-magyarorszag-mennyiseg">Világgazdaság: az Országos Vízügyi Főigazgatóság adatai a hazai vízkészletekről</a> (2026. július)</li>
+          <li><a href="https://infostart.hu/belfold/2025/04/08/hat-masodpercenkent-van-egy-csotores-magyarorszagon-minden-otodik-liter-ivoviz-elvesz">Infostart: Minden ötödik liter ivóvíz elvész</a> <span class="egyben">(2025. április 8.)</span></li>
+          <li><a href="https://vbszures.nnk.gov.hu/attachments/article/213/vizes_GYIK_egyeztetett%5B1%5D.pdf">Országos Környezetegészségügyi Intézet: Ivóvíz kiskáté</a> (2012)</li>
+          <li><a href="https://www.who.int/news/item/26-08-2025-1-in-4-people-globally-still-lack-access-to-safe-drinking-water---who--unicef">WHO és UNICEF: minden negyedik embernek nincs biztonságos ivóvize</a> <span class="egyben">(2025. augusztus 26.)</span></li>
+        </ol>
+        <p class="forrasok-megjegyzes">A megoldásokról szóló rész a témahét iskolai tablóján megjelent anyagok alapján készült.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="lablec">
+    <div class="keret lablec-belso">
+      <p class="lablec-cim">Témahét 2026 – Erőforrás krízisben: a víz</p>
+      <!-- Ide írd a saját nevedet és osztályodat! -->
+      <p>Készítette: [Neved], [osztályod]</p>
+      <p>Az illusztrációk saját készítésűek.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
